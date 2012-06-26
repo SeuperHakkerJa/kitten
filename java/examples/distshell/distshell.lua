@@ -37,6 +37,7 @@ distshell = yarn {
   name = "Distributed Shell",
   timeout = 10000,
   memory = 512,
+  cores = 1,
 
   master = {
     env = base_env,

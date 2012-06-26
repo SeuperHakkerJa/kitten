@@ -94,10 +94,17 @@ public class LuaContainerLaunchParameters implements ContainerLaunchParameters {
   }
 
   @Override
+  public int getCores() {
+    return lv.getInteger(LuaFields.CORES);
+  }
+
+  @Override
   public Resource getContainerResource(Resource clusterMin, Resource clusterMax) {
     Resource rsrc = Records.newRecord(Resource.class);
     rsrc.setMemory(Math.min(clusterMax.getMemory(),
         Math.max(clusterMin.getMemory(), getMemory())));
+    rsrc.setCores(Math.min(clusterMax.getCores(),
+        Math.max(clusterMin.getCores(), getCores())));
     return rsrc;
   }
 
