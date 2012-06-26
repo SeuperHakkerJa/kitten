@@ -36,7 +36,7 @@ public interface ContainerLaunchParameters {
   int getMemory();
 
   /**
-   * The requested cpu cores for this container in megabytes.
+   * The requested cpu cores for this container.
    */
   int getCores();
   
