@@ -73,6 +73,7 @@ Here is how yarn is used to define the distributed shell application:
 	  name = "Distributed Shell",
 	  timeout = 10000,
 	  memory = 512,
+	  cores = 1,
 
 	  master = {
  	    env = base_env, -- Defined elsewhere in the file
@@ -118,6 +119,8 @@ function.
 2. **memory** (integer, defaults to 512): The amount of memory to allocate for the container, in megabytes.
 If the same amount of memory is allocated for both the master and the containers, you can specify the value
 once inside of the yarn table and it will be linked to the subtables by the `yarn` function.
+3. **cores** (integer, defaults to 1): The number of CPU cores to allocate for the container; functions
+similarly to the **memory** option.
 3. **instances** (integer, defaults to 1): The number of instances of this container type to create
 on the cluster. Note that this only applies to the **container/containers** arguments; the system will only
 allocate a single master for each application.
