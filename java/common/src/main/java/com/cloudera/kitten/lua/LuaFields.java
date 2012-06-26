@@ -35,6 +35,7 @@ public class LuaFields {
   public static final String COMMAND = "command";
   public static final String INSTANCES = "instances";
   public static final String MEMORY = "memory";
+  public static final String CORES = "cores";
   public static final String PRIORITY = "priority";
 
   // For constructing commands from a LuaTable.

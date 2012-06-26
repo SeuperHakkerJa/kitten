@@ -34,6 +34,11 @@ public interface ContainerLaunchParameters {
    * The requested memory for this container in megabytes.
    */
   int getMemory();
+
+  /**
+   * The requested cpu cores for this container in megabytes.
+   */
+  int getCores();
   
   /**
    * Returns the resources needed for this job, using the cluster min and max as bounds.
